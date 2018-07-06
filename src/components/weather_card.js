@@ -1,10 +1,6 @@
 import React from 'react';
 import Timestamp from 'react-timestamp';
 
-
-import Moment from 'react-moment';
-import 'moment-timezone';
-
 class WeatherCard extends React.Component{
 
     bgColorClass(){
