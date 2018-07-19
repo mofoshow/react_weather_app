@@ -10,7 +10,7 @@ class DayCard extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      location: ''
+      location: 'Stockholm'
     }
   }
 
@@ -18,10 +18,15 @@ class DayCard extends React.Component {
     this.setState({ 'location': query });
   }
 
+  Capitalize(str){
+    return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
   render() {
     return (
       <div>
         <SearchBar onQuery={this.handleQuery.bind(this)} />
+        <h2 className="mt-3">{this.Capitalize(this.state.location)}</h2>
         <WeatherResults queryString={this.state.location} />
       </div>
     )
